@@ -1,0 +1,195 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f3ee;
+    color: #202525;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+.container {
+    width: min(100% - 40px, 1180px);
+    margin-inline: auto;
+}
+
+section {
+    width: 100%;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    width: 100%;
+    background: #e9eeec;
+    /* border-bottom: 1px solid #deded8; */
+    position: relative;
+    z-index: 10;
+}
+
+.header-inner {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: #1d5960;
+}
+
+.header-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 20px;
+    border: 1px solid #202525;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.25s ease;
+}
+
+.header-cta:hover {
+    background: #202525;
+    color: #fff;
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.hero,
+.benefits,
+.comparison,
+.how-it-works,
+.final-cta {
+    padding: 90px 0;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: #202525;
+    color: #fff;
+    padding: 45px 0 25px;
+}
+
+.disclosure {
+    max-width: 850px;
+    margin-bottom: 35px;
+    color: #c5c9c8;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.disclosure strong {
+    color: #fff;
+}
+
+.footer-bottom {
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-bottom p {
+    color: #aeb4b3;
+    font-size: 12px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #c5c9c8;
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: min(100% - 30px, 1180px);
+    }
+
+    .header-inner {
+        min-height: 68px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .header-cta {
+        padding: 9px 15px;
+        font-size: 12px;
+    }
+
+    .hero,
+    .benefits,
+    .comparison,
+    .how-it-works,
+    .final-cta {
+        padding: 65px 0;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,343 @@
+.hero {
+    position: relative;
+
+    padding: 120px 0 90px;
+
+    background-image: url("../asset/banner.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   DARK OVERLAY
+========================================= */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.52);
+
+    z-index: 0;
+}
+
+
+/* =========================================
+   HERO CONTAINER
+========================================= */
+
+.hero > .container {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =========================================
+   HERO LAYOUT
+========================================= */
+
+.hero-visual {
+    display: grid;
+
+    grid-template-columns: 1.15fr 0.85fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+    min-height: 560px;
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+    color: #ffffff;
+}
+
+.hero-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: #b8d5d0;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+
+.hero-content h1 {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(48px, 5.5vw, 72px);
+    line-height: 1;
+    letter-spacing: -3px;
+    font-weight: 800;
+}
+
+.hero-content h1 span {
+    display: block;
+
+    color: #b8d5d0;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.hero-text {
+    max-width: 560px;
+
+    margin: 25px 0 32px;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+
+/* =========================================
+   ZIP FORM
+========================================= */
+
+.zip-form {
+    max-width: 500px;
+
+    padding: 28px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.22);
+}
+
+.zip-form label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #273331;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.zip-input-wrap {
+    display: flex;
+
+    width: 100%;
+
+    border: 1px solid #cfd8d5;
+
+    background: #ffffff;
+}
+
+
+.zip-input-wrap input {
+    width: 100%;
+    min-width: 0;
+
+    padding: 17px 16px;
+
+    border: 0;
+    outline: none;
+
+    color: #1d2928;
+
+    background: #ffffff;
+
+    font-size: 15px;
+}
+
+
+.zip-input-wrap input::placeholder {
+    color: #9aa4a2;
+}
+
+
+.zip-input-wrap button {
+    flex-shrink: 0;
+
+    padding: 0 22px;
+
+    border: 0;
+
+    background: #356b68;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+
+.zip-input-wrap button:hover {
+    background: #274f4d;
+}
+
+
+.zip-input-wrap button span {
+    margin-left: 7px;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   HERO NOTE
+========================================= */
+
+.hero-note {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 14px;
+
+    color: #77817f;
+
+    font-size: 11px;
+}
+
+
+.note-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: #dce8e5;
+    color: #356b68;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        padding: 110px 0 70px;
+    }
+
+    .hero-visual {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        min-height: auto;
+    }
+
+    .hero-content h1 {
+        font-size: 54px;
+    }
+
+    .zip-form {
+        max-width: 600px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .hero {
+        padding: 100px 0 60px;
+
+        background-position: center;
+    }
+
+    .hero::before {
+        background: rgba(0, 0, 0, 0.58);
+    }
+
+    .hero-visual {
+        gap: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 44px;
+
+        letter-spacing: -2px;
+    }
+
+    .hero-text {
+        margin: 20px 0 25px;
+
+        font-size: 14px;
+    }
+
+    .zip-form {
+        width: 100%;
+
+        padding: 24px;
+    }
+
+    .zip-input-wrap {
+        display: block;
+
+        border: 0;
+    }
+
+    .zip-input-wrap input {
+        margin-bottom: 10px;
+
+        border: 1px solid #cfd8d5;
+    }
+
+    .zip-input-wrap button {
+        width: 100%;
+
+        min-height: 52px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+    .hero {
+        padding: 90px 0 50px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .zip-form {
+        padding: 20px;
+    }
+}

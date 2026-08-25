@@ -1,0 +1,228 @@
+.why-upgrade {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.upgrade-header {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    align-items: end;
+    gap: 70px;
+
+    margin-bottom: 60px;
+}
+
+.section-label {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: #356b68;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.upgrade-heading h2 {
+    max-width: 650px;
+
+    color: #1d2928;
+
+    font-size: clamp(40px, 5vw, 62px);
+    line-height: 1.02;
+    letter-spacing: -2.5px;
+    font-weight: 800;
+}
+
+.upgrade-heading h2 span {
+    color: #356b68;
+}
+
+.upgrade-intro {
+    color: #697573;
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   UPGRADE LIST
+========================================= */
+
+.upgrade-list {
+    border-top: 1px solid #dce2df;
+}
+
+.upgrade-item {
+    display: grid;
+    grid-template-columns: 90px 1fr 50px;
+    align-items: center;
+    gap: 35px;
+
+    min-height: 155px;
+
+    padding: 25px 15px;
+
+    border-bottom: 1px solid #dce2df;
+
+    transition:
+        background 0.25s ease,
+        padding 0.25s ease;
+}
+
+.upgrade-item:hover {
+    padding-left: 25px;
+    padding-right: 25px;
+
+    background: #eef3f1;
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.upgrade-number {
+    color: #9aaba7;
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.upgrade-content h3 {
+    margin-bottom: 8px;
+
+    color: #1d2928;
+
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 750;
+}
+
+.upgrade-content p {
+    max-width: 650px;
+
+    color: #707b79;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.upgrade-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid #cbd5d2;
+    border-radius: 50%;
+
+    color: #356b68;
+
+    font-size: 18px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.upgrade-item:hover .upgrade-arrow {
+    background: #356b68;
+    color: #ffffff;
+    border-color: #356b68;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+    .upgrade-header {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .upgrade-intro {
+        max-width: 600px;
+    }
+
+    .upgrade-item {
+        grid-template-columns: 65px 1fr 45px;
+        gap: 20px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .why-upgrade {
+        padding: 70px 0;
+    }
+
+    .upgrade-header {
+        margin-bottom: 40px;
+    }
+
+    .upgrade-heading h2 {
+        font-size: 40px;
+        letter-spacing: -1.8px;
+    }
+
+    .upgrade-item {
+        grid-template-columns: 45px 1fr;
+
+        gap: 15px;
+
+        min-height: auto;
+
+        padding: 25px 5px;
+    }
+
+    .upgrade-item:hover {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .upgrade-number {
+        align-self: start;
+        padding-top: 3px;
+    }
+
+    .upgrade-content h3 {
+        font-size: 19px;
+    }
+
+    .upgrade-content p {
+        font-size: 13px;
+    }
+
+    .upgrade-arrow {
+        display: none;
+    }
+}
